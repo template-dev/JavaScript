@@ -1,27 +1,30 @@
 document.addEventListener("DOMContentLoaded", () => {
-    const tabs = document.querySelector('.tabs');
-    const tabButtons = tabs.querySelectorAll('.tab-btn');
-    const tabContents = tabs.querySelectorAll('.tab-panel');
+    const tabs = document.querySelector(".tabs");
+    if (!tabs) return;
 
-    let activeButton = tabs.querySelector('.tab-btn.active');
-    let activePanel = tabs.querySelector('.tab-panel.active');
+    const tabsNav = tabs.querySelector(".tabs-nav");
+    const tabButtons = tabs.querySelectorAll(".tab-btn");
+    const tabPanels = tabs.querySelectorAll(".tab-panel");
 
-    tabButtons.forEach((button, index) => {
-        button.addEventListener('click', () => {
-            if (button === activeButton)
-                return;
+    let activeButton = tabs.querySelector(".tab-btn.active");
+    let activePanel = tabs.querySelector(".tab-panel.active");
 
-            activeButton.classList.remove('active');
-            activeButton.setAttribute('aria-selected', 'false');
+    tabsNav.addEventListener("click", (event) => {
+        const button = event.target.closest(".tab-btn");
+        if (!button || button === activeButton) return;
 
-            activePanel.classList.remove('active');
+        const index = Array.from(tabButtons).indexOf(button);
 
-            button.classList.add('active');
-            button.setAttribute('aria-selected', 'true');
-            tabContents[index].classList.add('active');
+        activeButton.classList.remove("active");
+        activeButton.setAttribute("aria-selected", "false");
 
-            activeButton = button;
-            activePanel = tabContents[index];
-        });
+        activePanel.classList.remove("active");
+
+        button.classList.add("active");
+        button.setAttribute("aria-selected", "true");
+        tabPanels[index].classList.add("active");
+
+        activeButton = button;
+        activePanel = tabPanels[index];
     });
 });
