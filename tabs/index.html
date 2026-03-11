@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Beautiful Tabs</title>
+    <link rel="stylesheet" href="styles.css">
+    <script defer src="app.js"></script>
+</head>
+<body>
+    <section class="tabs-section">
+        <div class="tabs-container">
+            <div class="tabs-header">
+                <p class="tabs-label">Components</p>
+                <h1 class="tabs-title">Beautiful Tabs UI</h1>
+                <p class="tabs-subtitle">
+                    Clean, modern tabs layout with a soft card style and elegant spacing.
+                </p>
+            </div>
+
+            <div class="tabs">
+                <div class="tabs-nav" role="tablist" aria-label="Tabs navigation">
+                    <button class="tab-btn active" type="button" role="tab" aria-selected="true">
+                        Overview
+                    </button>
+                    <button class="tab-btn" type="button" role="tab" aria-selected="false">
+                        Features
+                    </button>
+                    <button class="tab-btn" type="button" role="tab" aria-selected="false">
+                        Pricing
+                    </button>
+                    <button class="tab-btn" type="button" role="tab" aria-selected="false">
+                        Reviews
+                    </button>
+                </div>
+
+                <div class="tabs-content">
+                    <div class="tab-panel active" role="tabpanel">
+                        <div class="panel-card">
+                            <span class="panel-badge">Overview</span>
+                            <h2>Design that feels modern and premium</h2>
+                            <p>
+                                This layout is built to look clean and polished right away.
+                                You can connect tab switching later in JavaScript by toggling
+                                the <code>active</code> class on buttons and panels.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="tab-panel" role="tabpanel">
+                        <div class="panel-card">
+                            <span class="panel-badge">Features</span>
+                            <h2>Everything is ready for interaction</h2>
+                            <p>
+                                The markup already has navigation buttons and content panels.
+                                You only need to write JavaScript for switching the active state.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="tab-panel" role="tabpanel">
+                        <div class="panel-card">
+                            <span class="panel-badge">Pricing</span>
+                            <h2>Perfect base for dashboard or landing pages</h2>
+                            <p>
+                                This component fits SaaS interfaces, admin panels, portfolios,
+                                startup landing pages, and product pages.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="tab-panel" role="tabpanel">
+                        <div class="panel-card">
+                            <span class="panel-badge">Reviews</span>
+                            <h2>Simple structure, easy to extend</h2>
+                            <p>
+                                You can add icons, counters, animations, or even nested cards
+                                without changing the core structure.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+</html>
