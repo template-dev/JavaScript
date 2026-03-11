@@ -349,12 +349,18 @@ body {
     }
 
     .todo-input-wrap {
-        flex-direction: column;
-        align-items: stretch;
+        flex-direction: row;
+        align-items: center;
+    }
+
+    .todo-input {
+        flex: 1;
+        width: auto;
     }
 
     .todo-add-btn {
-        width: 100%;
+        width: auto;
+        flex-shrink: 0;
     }
 
     .todo-item {
@@ -374,11 +380,22 @@ body {
     }
 
     .todo-item {
-        flex-direction: column;
-        align-items: stretch;
+        position: relative;
+        flex-direction: row;
+        align-items: flex-start;
+        padding: 16px;
+        padding-right: 64px;
+    }
+
+    .todo-main {
+        width: 100%;
+        min-width: 0;
     }
 
     .todo-delete-btn {
-        align-self: flex-end;
+        position: absolute;
+        top: 16px;
+        right: 16px;
+        align-self: auto;
     }
 }
