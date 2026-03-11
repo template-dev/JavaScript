@@ -1,0 +1,111 @@
+* {
+    box-sizing: border-box;
+}
+
+:root {
+    --bg: #f4f7fb;
+    --card: #ffffff;
+    --text: #0f172a;
+    --muted: #64748b;
+    --primary: #4f46e5;
+    --primary2: #6366f1;
+    --line: #e2e8f0;
+}
+
+body {
+    margin: 0;
+    font-family: Inter, Arial, sans-serif;
+    background:
+        radial-gradient(circle at top left,#e0e7ff 0%,transparent 28%),
+        radial-gradient(circle at bottom right,#dbeafe 0%,transparent 26%),
+        var(--bg);
+    color: var(--text);
+}
+
+/* HEADER */
+
+.header {
+    padding: 60px 20px 30px;
+    text-align: center;
+}
+
+.logo {
+    font-size: 48px;
+    margin: 0;
+    font-weight: 900;
+    letter-spacing: -0.03em;
+}
+
+.subtitle {
+    margin-top: 12px;
+    color: var(--muted);
+    font-size: 18px;
+}
+
+/* MAIN */
+
+.main {
+    max-width: 1100px;
+    margin: auto;
+    padding: 30px 20px 80px;
+}
+
+.components {
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(240px,1fr));
+    gap: 26px;
+}
+
+/* CARD */
+
+.component-card {
+    text-decoration: none;
+    background: var(--card);
+    border-radius: 22px;
+    padding: 28px;
+    border: 1px solid var(--line);
+    box-shadow: 0 14px 28px rgba(15,23,42,0.06);
+    transition: all .25s ease;
+    color: inherit;
+}
+
+.component-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 22px 40px rgba(15,23,42,0.12);
+    border-color: #c7d2fe;
+}
+
+.component-card h2 {
+    margin: 16px 0 8px;
+    font-size: 20px;
+}
+
+.component-card p {
+    margin: 0;
+    color: var(--muted);
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+/* ICON */
+
+.component-icon {
+    font-size: 36px;
+    width: 56px;
+    height: 56px;
+    border-radius: 16px;
+    background: linear-gradient(135deg,var(--primary),var(--primary2));
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+}
+
+/* FOOTER */
+
+.footer {
+    text-align: center;
+    padding: 30px 20px;
+    color: var(--muted);
+    border-top: 1px solid var(--line);
+}
