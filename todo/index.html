@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Beautiful ToDo</title>
+    <link rel="stylesheet" href="styles.css">
+    <script defer src="app.js"></script>
+</head>
+<body>
+    <section class="todo-section">
+        <div class="todo-container">
+            <div class="todo-header">
+                <p class="todo-label">Productivity</p>
+                <h1 class="todo-title">ToDo App UI</h1>
+                <p class="todo-subtitle">
+                    A clean and modern task manager layout with elegant cards,
+                    filters, and smooth visual hierarchy.
+                </p>
+            </div>
+
+            <div class="todo-app">
+                <form class="todo-form">
+                    <div class="todo-input-wrap">
+                        <input
+                            type="text"
+                            class="todo-input"
+                            placeholder="Write your next task..."
+                        >
+                        <button class="todo-add-btn" type="submit">Add Task</button>
+                    </div>
+                </form>
+
+                <ul class="todo-list"></ul>
+
+                <div class="todo-footer">
+                    <span class="tasks-count"></span>
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+</html>
